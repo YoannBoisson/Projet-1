@@ -1,0 +1,92 @@
+/* CSS Ifé */
+:root {
+    --primary-color: #010712;
+    --secondary-color: #818386;
+    --bg-color: #FCFDFD;
+    --button-color: #3B3636;
+}
+
+#landingpage {
+    background: url("assets/img/homepage.jpg") no-repeat center;
+    background-size: cover;
+    height: 500px;
+    position: relative;
+}
+#landingpage-text {
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: rgb(255, 255, 255);
+}
+.contact-title {
+    color: var(--primary-color);
+    text-transform: uppercase;
+    font-size: 2.5rem;
+    letter-spacing: 0.5rem;
+    font-weight: 300;
+    padding: 2rem;
+}
+form {
+    width: 50rem;
+    margin-top: 2rem;
+    padding: 1rem 0;
+    margin: 0 auto;
+}
+input {
+    height: 5vh;
+}
+input, textarea {
+    border: none;
+    color: var(--primary-color);
+    font-weight: 500;
+    background-color: var(--bg-color);
+    border-bottom: 1px solid var(--secondary-color);
+    padding: 0.5rem 0;
+    margin-bottom: 1rem;
+    outline: none;
+    width: 70vw;
+}
+textarea {
+    resize: none;
+    height: 15vh;
+}
+input::placeholder, textarea::placeholder {
+    color: var(--primary-color);
+    font-size: 1rem;
+}
+button {
+    text-transform: uppercase;
+    font-weight: 300;
+    background: var(--button-color);
+    color: var(--bg-color);
+    width: 12rem;
+    height: 3rem;
+    border: none;
+    border-radius: 2px;
+    outline: none;
+    cursor: pointer;
+}
+input:hover, textarea:hover, button:hover {
+    opacity: 0.5;
+}
+button:active {
+    opacity: 0.8;
+}
+@media only screen and (max-width: 950px){
+    .contact-title {
+        font-size: 1.75rem;
+    }
+    input, textarea, button {
+        font-size: 0.65rem;
+    }
+    .description {
+        font-size: 0.3rem;
+        margin-left: 0.4rem;
+    }
+    button {
+        width: 7rem;
+    }
+}
+/* CSS Ifé */

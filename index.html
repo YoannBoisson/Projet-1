@@ -4,44 +4,136 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="./stylesecret.css">
+    <link rel="stylesheet" href="./stylemenu.css">
+    <link rel="stylesheet" href="./petitcreux.css">
+    <link rel="stylesheet" href="./landingpage.css">
+    <link rel="stylesheet" href="./secret.css">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Icons"
+      rel="stylesheet">
+    <title>Hopla Strasbourg</title>
 </head>
 <body>
-    <section class="landingpage">
-        <h1>Hopla Strasbourg !</h1>
-        <nav class="topbar">
-            <ul class="logo">
+    <div class="navigation">
+        <div class="toggle"><span></span></div>
+            <ul>
+                <li><a href="#landingpage">Accueil</a></li>
+                <li><a href="#petitCreux">Un petit creux</a></li>
+                <li><a href="#secret">Ses secrets</a></li>
+                <li><a href="#quiz">Quiz</a></li>
+                <li><a href="#contact">Contact</a></li>
             </ul>
-            <ul class="menus">
-                <li></li>
-                <li></li>
-                <li></li>
-            </ul>
-        </nav>
-    </section>
-
-    <section class="secrets">
-        <div class="secrets-article"></div>
-        <div class="secrets-article"></div>
-    </section>
-
-    <section class="secrets">
-        <div class="secrets-article"></div>
-        <div class="secrets-article"></div>
-    </section>
-
-    <section class="petitCreux">
-        <h2>Un petit Creux</h2>
-        <div class="restaurant">
+      </div>
+      <section id="landingpage">
+        <div id="landingpage-text">
+            <h1>HOPLA ! STRASBOURG</h1>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugiat, accusamus?</p>
         </div>
-        <div class="bar"></div>
-        <div class="patisserie"></div>
     </section>
-
-    <section class="quizz"></section>
-
-    <section class="contact">
+      <section>
+        <h2>Un petit Creux</h2>
+        <div class="petitCreux">
+            <div class="restaurant">
+                <a href="https://www.la-hache.com/" target="blank">
+                    <div class="description">
+                        <h3> La Hache </h3> 
+                        <p class="pCreux">Bistrot Chic et Moderne.</p>
+                    </div>
+                </a>
+            </div>
+            <div class="bar">
+                <a href="https://www.tripadvisor.fr/Restaurant_Review-g187075-d12326348-Reviews-Caupona-Strasbourg_Bas_Rhin_Grand_Est.html" target="blank">
+                    <div class="description">
+                        <h3>Caupona</h3> 
+                        <p class="pCreux">La Taverne de Strasbourg.</p>
+                    </div>
+                </a>    
+            </div>
+            <div class="patisserie">
+                <a href="https://www.maison-naegel.com/" target="blank">
+                    <div class="description">
+                        <h3>Naegel</h3> 
+                        <p class="pCreux">Tradition et Créativité.</p>
+                    </div>
+                </a>   
+            </div>
+        </div>
+    </section>
+    <section class="secrets">
+      <div class="secrets-article">
+              <!--Mon sous titre-->
+          <h2 class="secret1">Les secrets de Strasbourg</h2>
+      </div>
+      <div class=paragraphe>
+          <div class="para">
+              <!--Mon paragraphe-->
+              <p>
+                  Vous vous êtes déjà demandé <strong>pourquoi</strong> il y avait autant de rues du marché à
+                  Strasbourg ?
+                  Aujourd’hui,<strong> direction la rue Mercière !</strong>
+                  À Strasbourg, elle est la seule rue qui permette de voir la façade de la cathédrale dans son
+                  ensemble, des portes jusqu’à la flèche.
+                  <strong>Mais pourquoi a t-elle été baptisée la rue Mercière ?</strong>
+                  <strong>Son nom vient en fait du mot mercier, désignant les vendeurs au détail par opposition à
+                      la vente
+                      en gros sous l’Ancien régime.</strong> Ces commerçants vendaient toutes sortes de choses :
+                  des miroirs, des
+                  chaudrons, de la quincaillerie, des tableaux d’ornement, mais aussi des fourrures, des draps et
+                  des toiles. <strong>
+                      C’est d’ailleurs cette dernière activité, la vente de tissus, qui restera attachée à
+                      leur
+                      nom, donnant aux mots mercier et mercerie leur sens moderne, en lien avec les travaux de
+                      couture.</strong>
+              </p>
+          </div>
+          <div class="merciere">
+              <img id=img-merciere src="assets/img/img-merciere.jpg" alt="picture-merciere" />
+          </div>
+      </div>
+      </div>
+  </section>
+    <section id="secret" class="secret-2">
+      <h2 id="obus-h2" class="reveal-1">L'Hôtel Cathédrale</h2>
+        <div class="container">
+          <div class="split">
+            <div id="img-obus" class="reveal-2">
+              <img src="./assets/img/obus.jpg" alt="Obus">
+            </div>
+            <div class="reveal-3">
+              
+              <p>Si l’on regarde bien la façade de <strong>l’Hôtel Cathédrale</strong>, on ne manquera pas de remarquer le petit obus fiché dans l’angle à droite de l’enseigne de l’établissement. Ce petit détail amusant à première vue rappelle en fait à la mémoire du passant un bien triste souvenir.</p>
+              <p>En 1870, avec la guerre entre la France et la Prusse dont une des conséquences les plus dramatiques fut le siège de Strasbourg entre le 13 août et le 28 septembre 1870. Ce petit obus aujourd’hui inoffensif est en effet un obus <strong>prussien</strong>. Des milliers se sont abattus sur les toits de la ville, détruisant des centaines de maisons (la maison Kammerzell y a échappé de peu). Malgré l’évacuation d’enfants, de femmes et de vieillards, il y eut malheureusement des centaines de morts parmi la population civile et des milliers de blessés. Plusieurs autres semblables sont à découvrir en ville...</p>
+              <a href="https://www.strasbourgphoto.com/des-obus-encastres-dans-les-facades-strasbourgeoises/"><button id="readMore">Read more</button></a>
+            </div>
+                       
+          </div>
+        </div>
+      </section>
+      <section id="contact">
+        <h1 class="contact-title">PARTAGE AVEC NOUS TES AVENTURES</h1>
+        <form id="contact-form">
+                <div class="contact-form-input">
+                    <input type="text" id="nom" placeholder="Prénom et NOM" required>
+                </div>
+                <div class="contact-form-input">
+                    <input type="email" id="email-adresse" placeholder="Email" required>
+                </div>
+                <div class="contact-form-input">
+                    <textarea id="message"rows="6" placeholder="Message" required></textarea>
+                </div>
+            <div class="button">
+                <button type="submit" id="submit">Send</button>
+            </div>
+        </form>
         <footer class="copyright"></footer>
+      </section>
+    <section id="quiz">
+
     </section>
+
+    <button id="btnScrollToTop">
+      <i class="material-icons">arrow_upward</i>
+    </button>
+    <script src="./script.js"></script>
 </body>
 </html>
