@@ -1,0 +1,533 @@
+/* ==MENU== */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.navigation 
+{
+    position: fixed;
+    right: 5px;
+    height: 50px;
+    width: 125px;
+    height: 50px;
+    transition: 0.5s;
+    z-index: 100000;
+    overflow: hidden;
+}
+
+.navigation.active
+{
+    height: 350px;
+}
+
+.navigation .toggle 
+{
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    color: rgb(138, 138, 138);
+    background: rgba(97, 138, 138, 0);
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 0 20px;
+    font-size: 20px;
+    cursor: pointer;
+
+}
+
+.navigation .toggle:before
+{
+    content: "Menu";
+    margin-right: 10px;
+}
+
+.navigation .toggle.active:before
+{
+    content: "Close";
+    margin-right: 10px;
+}
+
+.navigation .toggle span
+{
+    position: relative;
+    width: 20px;
+    height: 50px;
+}
+
+.navigation .toggle span::before
+{
+    content: "";
+    position: absolute;
+    top: 20px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: rgb(138, 138, 138);
+    transition: 0.5s;
+}
+
+.navigation .toggle span::after
+{
+    content: "";
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: rgb(138, 138, 138);
+    transition: 0.5s;
+}
+
+.navigation .toggle.active span::before
+{
+    transform: rotate(225deg);
+    top: 24px;
+}
+
+.navigation .toggle.active span::after
+{
+    transform: rotate(135deg);
+    bottom: 24px;
+}
+
+.navigation ul
+{
+    position: relative;
+    background: rgba(0, 0, 0, 0.205);
+}
+
+.navigation ul li 
+{
+    list-style: none;
+}
+
+.navigation ul li a
+{
+    position: relative;
+    text-decoration: none;
+    display: block;
+    padding: 10px 20px;
+    height: 50px;
+    color: white;
+    font-size: 18px;
+    transition: 1s;
+}
+
+.navigation ul li a:hover
+{
+    transition: 0;
+    background:rgb(17, 17, 17);
+}
+
+
+/* CSS Ifé */
+:root {
+    --primary-color: #010712;
+    --secondary-color: #818386;
+    --bg-color: #FCFDFD;
+    --button-color: #3B3636;
+}
+
+#landingpage {
+    background: url("assets/img/homepage.jpg") no-repeat center;
+    background-size: cover;
+    position: relative;
+}
+#landingpage-text {
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: rgb(255, 255, 255);
+}
+.contact-title {
+    color: var(--primary-color);
+    text-transform: uppercase;
+    font-size: 2.5rem;
+    letter-spacing: 0.5rem;
+    font-weight: 300;
+    padding: 2rem;
+}
+form {
+    width: 50rem;
+    margin-top: 2rem;
+    padding: 1rem 0;
+    margin: 0 auto;
+}
+input {
+    height: 5vh;
+}
+input, textarea {
+    border: none;
+    color: var(--primary-color);
+    font-weight: 500;
+    background-color: var(--bg-color);
+    border-bottom: 1px solid var(--secondary-color);
+    padding: 0.5rem 0;
+    margin-bottom: 1rem;
+    outline: none;
+    width: 70vw;
+}
+textarea {
+    resize: none;
+    height: 15vh;
+}
+input::placeholder, textarea::placeholder {
+    color: var(--primary-color);
+    font-size: 1rem;
+}
+button {
+    text-transform: uppercase;
+    font-weight: 300;
+    background: var(--button-color);
+    color: var(--bg-color);
+    width: 12rem;
+    height: 3rem;
+    border: none;
+    border-radius: 2px;
+    outline: none;
+    cursor: pointer;
+}
+input:hover, textarea:hover, button:hover {
+    opacity: 0.5;
+}
+button:active {
+    opacity: 0.8;
+}
+
+/* ===CSS Jérôme */
+
+h2 {
+    font-size: 40px;
+    text-align: center;
+    margin: 2rem 1rem;
+}
+
+  
+  a{
+    text-decoration: none;
+    color: white;
+  }
+  .petitCreux {
+    display: flex;
+    flex-direction: column;
+  }
+  h3{
+    text-align: center;
+    font-style: oblique;
+    text-shadow: 0.055em 0.055em black;
+  }
+  .restaurant {
+    height: 60vh;
+    width: 85vw;
+    position: relative;
+    background: url("assets/img/lahache1.jpg") no-repeat center;
+    background-size: cover;
+    margin: 25px 20px;
+    border-radius: 2rem;
+    box-shadow: 2px 3px 10px rgba(54, 53, 53, 0.774);
+    filter: grayscale(0%);
+    transition: .3s ease-in-out;
+  }
+  .bar {
+    height: 60vh;
+     width: 85vw;
+    position: relative;
+    background: url("assets/img/caupona.jpg") no-repeat center;
+    background-size: cover;
+    margin: 25px 20px;
+    border-radius: 2rem;
+    box-shadow: 2px 3px 10px black;
+    filter: grayscale(0%);
+    transition: .3s ease-in-out;
+  }
+  .patisserie{
+    height: 60vh;
+     width: 85vw;
+    position: relative;
+    background: url("assets/img/naegel.jpg") no-repeat center;
+    background-size: cover;
+    margin: 25px 20px;
+    border-radius: 2rem;
+    box-shadow: 2px 3px 10px black;
+    filter: grayscale(0%);
+    transition: .3s ease-in-out;
+  }
+  .boxInformations {
+    position:absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 1.6em;
+  }
+  .testpara{
+    padding: 20px;
+  }
+  .restaurant:hover {
+    filter: grayscale(80%);
+  }
+  .bar:hover{
+    filter: grayscale(80%);
+  }
+  .patisserie:hover{
+    filter: grayscale(80%);
+  }
+  .pCreux{
+    text-align: center;
+    margin-top: 10px;
+    font-style: oblique;
+    text-shadow: 0.055em 0.055em black;
+  }
+  
+/* ==CSS Laura== */
+.secret {
+    display: flex;
+}
+
+.paragraphe {
+    display: flex;
+    flex-direction: column;
+    text-align: justify;
+    margin: 1em;
+    line-height: 1.5;
+}
+#texte {
+    text-align: justify;
+    margin: 1em;
+}
+
+.merciere {
+    height: 50vh;
+    background: url("assets/img/img-merciere.jpg") no-repeat center;
+    background-size: cover;
+}
+
+/* ==CSS Yoann */
+
+
+.prusse 
+{
+  margin-bottom: 1em;
+  margin-top: 1em;
+  line-height: 1.5em;
+  text-align: justify;
+}
+
+.fleximg
+{
+  display: flex;
+
+}
+
+#img-obus
+{
+background: url("./assets/img/obus.jpg") no-repeat center;
+background-size: cover;
+margin-right: 0.5rem;
+width: 45vw;
+height: 33vh;
+}
+
+#img-obus2
+{
+  background: url("./assets/img/Obus-place-de-la-cathédrale.jpg") no-repeat center;
+  background-size: cover;
+  margin-left: 0.5rem;
+  width: 45vw;
+  height: 33vh;
+}
+
+
+.container 
+{
+  margin-inline: auto;
+  width: min(90%, 70.5rem);
+    
+}
+  
+.split 
+{
+  display: flex;
+  flex-direction: column;
+  text-align: right;
+  justify-content: center;
+  align-items: center;
+}
+
+/* ==========readmore button===========> */
+
+#readMore 
+{
+    border: 0;
+    padding: 0 20px;
+    font-size: 1rem;
+    text-align: center;
+    color: #fff;
+    text-shadow: 1px 1px 1px #000;
+    border-radius: 10px;
+    background-color: rgb(68, 68, 68, 0.5);
+    background-image: linear-gradient(to top left,
+                                      rgba(0, 0, 0, .2),
+                                      rgba(0, 0, 0, .2) 30%,
+                                      rgba(0, 0, 0, 0));
+    box-shadow: inset 2px 2px 3px rgba(255, 255, 255, .6),
+                inset -2px -2px 3px rgba(0, 0, 0, .6);
+}
+
+#readMore:hover 
+{
+    background-color: rgb(63, 63, 63);
+}
+
+#readMore:active 
+{
+    box-shadow: inset -2px -2px 3px rgba(255, 255, 255, .6),
+                inset 2px 2px 3px rgba(0, 0, 0, .6);
+}
+/* <==========readmore button=========== */
+
+/* ==== SMOOTH SCROLL CLASS======> */
+
+[class*="reveal-"] 
+{
+  opacity: 0;
+  transform: translateY(-30px);
+}
+
+
+.reveal-visible
+{
+  opacity: 1;
+  transform: translateY(0);
+  transition: 1s cubic-bezier(0.5, 0, 0, 1);
+}
+
+.reveal-1
+{
+  transition-delay: 0.1s;
+}
+
+.reveal-2 
+{
+  transition-delay: 0.2s;
+}
+
+.reveal-3 
+{
+  transition-delay: 0.3s;
+}
+/* <=================SMOOTH========================= */
+
+/* ==============To TOP button=============> */
+#btnScrollToTop 
+{
+  position: fixed;
+  right: 10px;
+  bottom: 10px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: rgb(212, 212, 212, 0.4);
+  box-shadow: 0 0 10px black(0, 0, 0, 0.25);
+  color: rgba(167, 167, 167, 0.4);
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+
+#btnScrollToTop:hover 
+{
+  background: rgb(255, 0, 0);
+  color: rgb(255, 255, 255);
+}
+
+#btnScrollToTop:active 
+{
+  background: grey;
+}
+
+
+/* <==============To TOP button============= */
+
+@media only screen and (min-width: 600px){
+    .contact-title {
+        font-size: 1.75rem;
+    }
+    input, textarea, button {
+        font-size: 0.65rem;
+    }
+    .description {
+        font-size: 0.3rem;
+        margin-left: 0.4rem;
+    }
+    button {
+        width: 7rem;
+    }
+
+    .petitCreux {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .secret1 {
+        margin-top: 2em;
+        margin-bottom: 1em;
+        text-align: justify;
+    }
+    .paragraphe {
+        flex-direction: row;
+    }
+    .para {
+        width: 50%;
+    }
+   .merciere {
+       width: 50%;   
+   }
+    .secret1 {
+        text-align: initial;
+        margin: 1em;
+    }
+    .secrets-titre {
+    max-width: 100%;
+    }
+
+    .split {
+        flex-direction: row;
+    }
+    
+    .split > * {
+        flex-basis: 100%;
+    }
+    
+    .split > * + * {
+        margin-left: 2em;
+    }
+
+    .fleximg {
+      flex-direction: column;
+     }
+
+    #img-obus
+    {
+    margin: 0.5rem;
+    
+    }
+    
+    #img-obus2
+    {
+      margin: 0.5rem;
+     }
+
+     section 
+     {
+         height: 100vh;
+     }
+
+}
