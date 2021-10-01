@@ -27,7 +27,7 @@ h2{
     margin: 25px 20px;
     border-radius: 2rem;
     box-shadow: 2px 3px 10px rgba(54, 53, 53, 0.774);
-    filter: grayscale(80%);
+    filter: grayscale(0%);
     transition: .3s ease-in-out;
   }
   .bar {
@@ -39,7 +39,7 @@ h2{
     margin: 25px 20px;
     border-radius: 2rem;
     box-shadow: 2px 3px 10px black;
-    filter: grayscale(80%);
+    filter: grayscale(0%);
     transition: .3s ease-in-out;
   }
   .patisserie{
@@ -51,10 +51,10 @@ h2{
     margin: 25px 20px;
     border-radius: 2rem;
     box-shadow: 2px 3px 10px black;
-    filter: grayscale(80%);
+    filter: grayscale(0%);
     transition: .3s ease-in-out;
   }
-  .description {
+  .boxInformations {
     position:absolute;
     top: 50%;
     left: 50%;
@@ -66,13 +66,13 @@ h2{
     padding: 20px;
   }
   .restaurant:hover {
-    filter: grayscale(0);
+    filter: grayscale(80%);
   }
   .bar:hover{
-    filter: grayscale(0);
+    filter: grayscale(80%);
   }
   .patisserie:hover{
-    filter: grayscale(0);
+    filter: grayscale(80%);
   }
   .pCreux{
     text-align: center;
