@@ -307,6 +307,7 @@ h2 {
     height: 50vh;
     background: url("assets/img/img-merciere.jpg") no-repeat center;
     background-size: cover;
+    border-radius: 2rem;
 }
 
 /* ==CSS Yoann */
@@ -486,9 +487,13 @@ height: 33vh;
     }
     .para {
         width: 50%;
+       padding: 8em;
     }
    .merciere {
-       width: 50%;   
+       width: 50%;
+       padding: 20em;
+       border-radius: 2rem;
+     
    }
     .secret1 {
         text-align: initial;
