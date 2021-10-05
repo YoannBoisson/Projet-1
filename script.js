@@ -9,7 +9,7 @@ document.querySelector(".toggle").onclick = function ()
 
 //=============SMOOTH
 
-const ratio = 0.3; //ratio d'apparition de l'objet
+const ratio = 0.5; //ratio d'apparition de l'objet
 
 const options = { //observateur d'intersection
    root: null,
@@ -32,20 +32,33 @@ document.querySelectorAll("[class*=reveal-]").forEach(function (r) {
    observer.observe(r);  // élément à observer
 })
 
-/* 
-====> FONCTIONNE sur 1 classe
-const handleIntersect = function (entries, observer) {
+
+/* ====> FONCTIONNE sur 1 classe */
+const handleIntersect2 = function (entries, observer) {
    entries.forEach(function (entry) {
       if (entry.intersectionRatio > ratio) {
-         entry.target.classList.add('reveal-visible')
+         entry.target.classList.add('rexeal-visible')
          observer.unobserve(entry.target)
       } 
    })
 }
       
 
-const observer = new IntersectionObserver(handleIntersect, options)
-observer.observe(document.querySelector(".reveal")) */
+const observer2 = new IntersectionObserver(handleIntersect2, options)
+observer2.observe(document.querySelector(".rexeal"))
+
+const handleIntersect3 = function (entries, observer) {
+   entries.forEach(function (entry) {
+      if (entry.intersectionRatio > ratio) {
+         entry.target.classList.add('rexeal2-visible')
+         observer.unobserve(entry.target)
+      } 
+   })
+}
+      
+
+const observer3 = new IntersectionObserver(handleIntersect3, options)
+observer3.observe(document.querySelector(".rexeal2"))
 
 //====================SCROLL TOP
 
@@ -59,32 +72,172 @@ btnScrollToTop.addEventListener("click", function () {
    })})
 
 //==============================================
-let sectionQuiz = document.getElementById("quiz");
 
-if (window.scrollTo(sectionQuiz)){
-const questions = [
-    {
-       prompt:"De quelle origine est l'obus dans le mur de l'Hôtel Cathédrale ?\n(a) Allemande\n(b) Prusse\n(c) Russe",
-       answer: "b"
-    },
-    {
-        prompt:"Pourquoi la rue Mercière se prénomme ainsi ?\n(a)En lien avec le commerce qui s'y tenait \n(b) Par rapport au politique qui résidait dans la rue\n(c) Sur décision du cardinal A.G. M. Rohan",
-        answer: "a"
-    },
-   ]
-    let score = 0 
-   
-    for(let i = 0 ; i < questions.length ; i++) {
-       let response = window.prompt(questions[i].prompt);
-       if (response == questions[i].answer){
-          score ++;
-          alert("Correct");
-       } else {
-          alert("Wrong");
-       }
-    }
-   
-    alert("You got" + score + "/" + questions.length)
+    //    prompt:"Pourquoi la rue Mercière se prénomme ainsi ?\n(a)En lien avec le commerce qui s'y tenait \n(b) Par rapport au politique qui résidait dans la rue\n(c) Sur décision du cardinal A.G. M. Rohan",
+ 
+   let myQuestions = [
+      {
+         question: "De quelle armée provient l'obus de l'Hôtel Cathédrale ?",
+         answers: {
+            a: 'Russe',
+            b: 'Germanique',
+            c: 'Prusse'
+         },
+         correctAnswer: 'c'
+      },
+      {
+         question: "D'où provient le nom de la rue Mercière ?",
+         answers: {
+            a: '...',
+            b: '...',
+            c: '...'
+         },
+         correctAnswer: 'b'
+      },
+      {
+         question: "Question au hasard",
+         answers: {
+            a: '...',
+            b: '...',
+            c: '...'
+         },
+         correctAnswer: 'a'
+      },
+      {
+         question: "Question au hasard2",
+         answers: {
+            a: '...',
+            b: '...',
+            c: '...'
+         },
+         correctAnswer: 'c'
+      },
+      {
+         question: "Question au hasard",
+         answers: {
+            a: '...',
+            b: '...',
+            c: '...'
+         },
+         correctAnswer: 'a'
+      },
+      {
+         question: "Question au hasard2",
+         answers: {
+            a: '...',
+            b: '...',
+            c: '...'
+         },
+         correctAnswer: 'b'
+      },
+      {
+         question: "Question au hasard",
+         answers: {
+            a: '...',
+            b: '...',
+            c: '...'
+         },
+         correctAnswer: 'a'
+      },
+      {
+         question: "Question au hasard2",
+         answers: {
+            a: '...',
+            b: '...',
+            c: '...'
+         },
+         correctAnswer: 'b'
+      }
+   ];
 
-}
+let quizContainer = document.getElementById('quiz');
+let resultsContainer = document.getElementById('results');
+let submitButton = document.getElementById('valider');
+
+generateQuiz(myQuestions, quizContainer, resultsContainer, submitButton);
+
+
+    function generateQuiz(questions, quizContainer, resultsContainer, submitButton){
+
+      function showQuestions(questions, quizContainer){
+         
+         let output = [];
+         let answers;
+      
+  
+         for(let i=0; i<questions.length; i++){
+            
+            // table des réponses
+            answers = [];
+      
+            // BOUTON RADIO SUR HTML
+            for(letter in questions[i].answers){
+               answers.push(
+                  '<label>'
+                     + '<input type="radio" name="question'+i+'" value="'+ letter +'">'
+                     + letter + ' : '
+                     + questions[i].answers[letter]
+                  +'</label>'
+               );
+            }
+      
+          
+            output.push(
+               '<div class="question">' + questions[i].question + '</div>'
+               + '<div class="answers">' + answers.join('') + '</div>'
+            );
+         }
+      
+         
+         quizContainer.innerHTML = output.join('');
+
+         }
+   
+      
+   
+      function showResults(questions, quizContainer, resultsContainer){
+	
+
+         let answerContainers = quizContainer.querySelectorAll('.answers');
+         
+
+         let userAnswer = '';
+         let numCorrect = 0;
+         
+
+         for(let i=0; i<questions.length; i++){
+      
+            userAnswer = (answerContainers[i].querySelector('input[name=question'+i+']:checked') || {}).value; //undefined si pas de réponse mais pas erreur
+            
+            if(userAnswer===questions[i].correctAnswer){
+               numCorrect++;
+           
+               answerContainers[i].style.color = 'lightgreen';
+            }
+            else{
+               answerContainers[i].style.color = 'red';
+            }
+         }
+      // SCORE
+      resultsContainer.innerHTML = numCorrect + ' sur ' + questions.length;
+      resultsContainer.style.textAlign = "right";
+      resultsContainer.style.fontStyle = "bold"
+      resultsContainer.style.fontSize = "2em"
+      resultsContainer.style.fontFamily = "Poppins"
+   }
+
+   showQuestions(questions, quizContainer);
+   
+ 
+      submitButton.onclick = function(){
+         showResults(questions, quizContainer, resultsContainer);
+      }
+   }
+
+
+
+
+
+
+
 
