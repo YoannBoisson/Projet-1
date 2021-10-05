@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('https://fr.allfont.net/allfont.css?fonts=playfair-display');
+
 /* ==MENU== */
 * {
     box-sizing: border-box;
@@ -484,13 +487,34 @@ height: 33vh;
 /* <==============To TOP button============= */
 /* ==============QUIZ=============> */
 
+.quizz
+{
+  padding: 1rem;
+  
+}
 
+#quiz
+{
+  display: grid;
+  grid-gap: 0.5rem;
+  
+  }
+
+#valider
+{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 1rem;
+}
 
 .question{
 	font-weight: 600;
+  background-color: aquamarine;
 }
 .answers {
     margin-bottom: 1rem;
+    background-color: aqua;
 }
 
 input[type="radio"]{
@@ -579,6 +603,7 @@ label {
          height: 100vh;
      }
 
+<<<<<<< HEAD
      .contact-title
      {
        text-align: center;
@@ -586,3 +611,10 @@ label {
      
 
 }
+=======
+     #quiz
+     {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+>>>>>>> 84bcb7fa253c3fe32eeb574960f24715ac47aa14
