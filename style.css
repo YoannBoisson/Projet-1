@@ -8,6 +8,13 @@
     padding: 0;
 }
 
+h1, h2, h3  {
+  font-family: "Poppins";
+}
+
+body {
+  font-family: "Playfair display", arial;
+}
 .navigation 
 {
     position: fixed;
@@ -140,6 +147,7 @@
     background: url("assets/img/homepage.jpg") no-repeat center;
     background-size: cover;
     position: relative;
+    height: 100vh;
 }
 
 #landingpage-text {
@@ -171,6 +179,7 @@ input[type="email"], input[type="text"], textarea {
     border: none;
     color: var(--primary-color);
     font-weight: 500;
+    font-family: inherit;
     background-color: var(--bg-color);
     border-bottom: 1px solid var(--secondary-color);
     padding: 0.5rem 0;
@@ -299,7 +308,7 @@ h2 {
     display: flex;
     flex-direction: column;
     text-align: justify;
-    margin: 1em;
+    margin: 0 auto;
     line-height: 1.5;
 }
 #texte {
@@ -560,11 +569,11 @@ label {
     }
     .para {
         width: 50%;
-       padding: 8em;
+       padding: 1rem;
     }
    .merciere {
        width: 50%;
-       padding: 20em;
+       padding: 1rem;
        border-radius: 2rem;
      
    }
@@ -595,12 +604,13 @@ label {
     #img-obus
     {
     margin: 0.5rem;
-    
+    width: 35vw;
     }
     
     #img-obus2
     {
       margin: 0.5rem;
+      width: 35vw;
      }
 
      section 
@@ -617,6 +627,10 @@ label {
      #quiz
      {
       grid-template-columns: repeat(4, 1fr);
+    }
+
+    .card {
+      box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     }
 }
 
