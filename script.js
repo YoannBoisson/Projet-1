@@ -9,7 +9,7 @@ document.querySelector(".toggle").onclick = function ()
 
 //=============SMOOTH
 
-const ratio = 0.3; //ratio d'apparition de l'objet
+const ratio = 0.5; //ratio d'apparition de l'objet
 
 const options = { //observateur d'intersection
    root: null,
@@ -110,13 +110,49 @@ btnScrollToTop.addEventListener("click", function () {
             b: '...',
             c: '...'
          },
-         correctAnswer: 'bc'
+         correctAnswer: 'c'
+      },
+      {
+         question: "Question au hasard",
+         answers: {
+            a: '...',
+            b: '...',
+            c: '...'
+         },
+         correctAnswer: 'a'
+      },
+      {
+         question: "Question au hasard2",
+         answers: {
+            a: '...',
+            b: '...',
+            c: '...'
+         },
+         correctAnswer: 'b'
+      },
+      {
+         question: "Question au hasard",
+         answers: {
+            a: '...',
+            b: '...',
+            c: '...'
+         },
+         correctAnswer: 'a'
+      },
+      {
+         question: "Question au hasard2",
+         answers: {
+            a: '...',
+            b: '...',
+            c: '...'
+         },
+         correctAnswer: 'b'
       }
    ];
 
 let quizContainer = document.getElementById('quiz');
 let resultsContainer = document.getElementById('results');
-let submitButton = document.getElementById('submit');
+let submitButton = document.getElementById('valider');
 
 generateQuiz(myQuestions, quizContainer, resultsContainer, submitButton);
 
@@ -184,6 +220,10 @@ generateQuiz(myQuestions, quizContainer, resultsContainer, submitButton);
          }
       // SCORE
       resultsContainer.innerHTML = numCorrect + ' sur ' + questions.length;
+      resultsContainer.style.textAlign = "right";
+      resultsContainer.style.fontStyle = "bold"
+      resultsContainer.style.fontSize = "2em"
+      resultsContainer.style.fontFamily = "Poppins"
    }
 
    showQuestions(questions, quizContainer);
