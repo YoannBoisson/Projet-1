@@ -603,18 +603,15 @@ label {
          height: 100vh;
      }
 
-<<<<<<< HEAD
+
      .contact-title
      {
        text-align: center;
      }
      
-
-}
-=======
      #quiz
      {
       grid-template-columns: repeat(4, 1fr);
     }
-  }
->>>>>>> 84bcb7fa253c3fe32eeb574960f24715ac47aa14
+}
+
