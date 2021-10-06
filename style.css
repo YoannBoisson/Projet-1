@@ -362,6 +362,24 @@ h3{
     /* border-radius: 2rem; */
 }
 
+.footer {
+  display: flex;
+  justify-content: space-between;
+}
+
+#nousSuivre {
+  margin-left: 2em;
+}
+
+.fab {
+  color: black;
+}
+
+.fab:hover {
+  color: red;
+}
+
+
 /* ==CSS Yoann */
 
 
