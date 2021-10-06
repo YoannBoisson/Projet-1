@@ -104,15 +104,6 @@ btnScrollToTop.addEventListener("click", function () {
          correctAnswer: 'a'
       },
       {
-         question: "Question au hasard2",
-         answers: {
-            a: '...',
-            b: '...',
-            c: '...'
-         },
-         correctAnswer: 'c'
-      },
-      {
          question: "Bonus : quel film a été tourné à Strasbourg ?",
          answers: {
             a: '...',
