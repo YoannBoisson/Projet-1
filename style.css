@@ -375,38 +375,6 @@ height: 33vh;
   align-items: center;
 }
 
-/* ==========readmore button===========> */
-
-#readMore 
-{
-    border: 0;
-    padding: 0 20px;
-    font-size: 1rem;
-    text-align: center;
-    color: #fff;
-    text-shadow: 1px 1px 1px #000;
-    border-radius: 10px;
-    background-color: rgb(68, 68, 68, 0.5);
-    background-image: linear-gradient(to top left,
-                                      rgba(0, 0, 0, .2),
-                                      rgba(0, 0, 0, .2) 30%,
-                                      rgba(0, 0, 0, 0));
-    box-shadow: inset 2px 2px 3px rgba(255, 255, 255, .6),
-                inset -2px -2px 3px rgba(0, 0, 0, .6);
-}
-
-#readMore:hover 
-{
-    background-color: rgb(63, 63, 63);
-}
-
-#readMore:active 
-{
-    box-shadow: inset -2px -2px 3px rgba(255, 255, 255, .6),
-                inset 2px 2px 3px rgba(0, 0, 0, .6);
-}
-/* <==========readmore button=========== */
-
 /* ==== SMOOTH SCROLL CLASS======> */
 
 [class*="reveal-"] 
@@ -476,7 +444,7 @@ height: 33vh;
   border-radius: 50%;
   background: rgb(212, 212, 212, 0.4);
   box-shadow: 0 0 10px black(0, 0, 0, 0.25);
-  color: rgba(167, 167, 167, 0.4);
+  color: rgba(10, 10, 10, 0.719);
   outline: none;
   border: none;
   cursor: pointer;
@@ -500,15 +468,13 @@ height: 33vh;
 .quizz
 {
   padding: 1rem;
-  
 }
 
 #quiz
 {
   display: grid;
   grid-gap: 0.5rem;
-  
-  }
+}
 
 #valider
 {
@@ -516,15 +482,34 @@ height: 33vh;
   margin-left: auto;
   margin-right: auto;
   margin-top: 1rem;
+  margin-bottom: 1rem;
+  width: 12rem;
+  transition: 0.1s;
 }
 
-.question{
-	font-weight: 600;
-  background-color: aquamarine;
+.question {
+	font-weight: 550;
+  color: rgb(255, 255, 255);
+  border: solid 1px rgba(0, 0, 0, 0.5);
+  background-color: #3B3636;
+  border-radius: 5px;
+  width: 80vw;
+  padding: 0.5rem;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 .answers {
-    margin-bottom: 1rem;
-    background-color: aqua;
+  margin-bottom: 0.5rem;
+  padding-left: 1rem;
+  width: 80vw;
+  border: solid 1px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-direction: column;
 }
 
 input[type="radio"]{
@@ -623,12 +608,10 @@ label {
      {
        text-align: center;
      }
+     .question, .answers {
+       width: 60vw;
+     }
      
-     #quiz
-     {
-      grid-template-columns: repeat(4, 1fr);
-    }
-
     .card {
       box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     }
