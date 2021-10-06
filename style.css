@@ -14,6 +14,7 @@ h1, h2, h3  {
 
 body {
   font-family: "Playfair display", arial;
+  position: relative;
 }
 .navigation 
 {
@@ -25,6 +26,12 @@ body {
     transition: 0.5s;
     z-index: 100000;
     overflow: hidden;
+    background-color: black;
+}
+
+.navigation:hover {
+  background: rgba(255, 0, 0, 0.734);
+  opacity: 0.8;
 }
 
 .navigation.active
@@ -39,7 +46,7 @@ body {
     left: 0;
     width: 100%;
     height: 50px;
-    color: rgb(138, 138, 138);
+    color: rgb(255, 255, 255);
     background: rgba(97, 138, 138, 0);
     display: flex;
     align-items: center;
@@ -158,6 +165,23 @@ body {
     transform: translate(-50%, -50%);
     color: rgb(255, 255, 255);
 }
+
+#landingpage-text h1 {
+  font-size: 5em;
+}
+
+.card {
+  /* border: 2px solid black; */
+  width: 90%;
+  height: 470%;
+  position: absolute;
+  top: 90%;
+  right: 5%;
+  background-color: #FCFDFD;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  border-radius: 2px;
+}
+
 .contact-title {
     color: var(--primary-color);
     text-transform: uppercase;
@@ -166,35 +190,42 @@ body {
     font-weight: 300;
     padding: 2rem;
 }
+
 form {
-    width: 50rem;
+    width: 100%;
     margin-top: 2rem;
     padding: 1rem 0;
     margin: 0 auto;
 }
+
 input[type="email"], input[type="text"] {
     height: 5vh;
 }
+
 input[type="email"], input[type="text"], textarea {
     border: none;
     color: var(--primary-color);
     font-weight: 500;
-    font-family: inherit;
+    font-size: 1em;
+    font-family: "Playfair display", arial;
     background-color: var(--bg-color);
     border-bottom: 1px solid var(--secondary-color);
-    padding: 0.5rem 0;
+    padding: 0.5rem 1rem;
     margin-bottom: 1rem;
     outline: none;
-    width: 100%;
+    width: 95%;
 }
+
 textarea {
     resize: none;
     height: 15vh;
 }
+
 input::placeholder, textarea::placeholder {
     color: var(--primary-color);
     font-size: 1rem;
 }
+
 button {
     text-transform: uppercase;
     font-weight: 300;
@@ -207,9 +238,17 @@ button {
     outline: none;
     cursor: pointer;
 }
+
+.send {
+  width: 12rem;
+  height: 3rem;
+  margin: 0 auto;
+}
+
 input:hover, textarea:hover, button:hover {
     opacity: 0.5;
 }
+
 button:active {
     opacity: 0.8;
 }
@@ -223,82 +262,82 @@ h2 {
 }
 
   
-  a{
-    text-decoration: none;
-    color: white;
-  }
-  .petitCreux {
-    display: flex;
-    flex-direction: column;
-  }
-  h3{
-    text-align: center;
-    font-style: oblique;
-    text-shadow: 0.055em 0.055em black;
-  }
-  .restaurant {
-    height: 60vh;
+a{
+  text-decoration: none;
+  color: white;
+}
+.petitCreux {
+  display: flex;
+  flex-direction: column;
+}
+h3{
+  text-align: center;
+  font-style: oblique;
+  text-shadow: 0.055em 0.055em black;
+}
+.restaurant {
+  height: 60vh;
+  width: 85vw;
+  position: relative;
+  background: url("assets/img/lahache1.jpg") no-repeat center;
+  background-size: cover;
+  margin: 25px 20px;
+  border-radius: 2px;
+  box-shadow: 2px 3px 10px rgba(54, 53, 53, 0.774);
+  filter: grayscale(0%);
+  transition: .3s ease-in-out;
+}
+.bar {
+  height: 60vh;
     width: 85vw;
-    position: relative;
-    background: url("assets/img/lahache1.jpg") no-repeat center;
-    background-size: cover;
-    margin: 25px 20px;
-    border-radius: 2rem;
-    box-shadow: 2px 3px 10px rgba(54, 53, 53, 0.774);
-    filter: grayscale(0%);
-    transition: .3s ease-in-out;
-  }
-  .bar {
-    height: 60vh;
-     width: 85vw;
-    position: relative;
-    background: url("assets/img/caupona.jpg") no-repeat center;
-    background-size: cover;
-    margin: 25px 20px;
-    border-radius: 2rem;
-    box-shadow: 2px 3px 10px black;
-    filter: grayscale(0%);
-    transition: .3s ease-in-out;
-  }
-  .patisserie{
-    height: 60vh;
-     width: 85vw;
-    position: relative;
-    background: url("assets/img/naegel.jpg") no-repeat center;
-    background-size: cover;
-    margin: 25px 20px;
-    border-radius: 2rem;
-    box-shadow: 2px 3px 10px black;
-    filter: grayscale(0%);
-    transition: .3s ease-in-out;
-  }
-  .boxInformations {
-    position:absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: white;
-    font-size: 1.6em;
-  }
-  .testpara{
-    padding: 20px;
-  }
-  .restaurant:hover {
-    filter: grayscale(80%);
-  }
-  .bar:hover{
-    filter: grayscale(80%);
-  }
-  .patisserie:hover{
-    filter: grayscale(80%);
-  }
-  .pCreux{
-    text-align: center;
-    margin-top: 10px;
-    font-style: oblique;
-    text-shadow: 0.055em 0.055em black;
-  }
-  
+  position: relative;
+  background: url("assets/img/caupona.jpg") no-repeat center;
+  background-size: cover;
+  margin: 25px 20px;
+  border-radius: 2px;
+  box-shadow: 2px 3px 10px black;
+  filter: grayscale(0%);
+  transition: .3s ease-in-out;
+}
+.patisserie{
+  height: 60vh;
+    width: 85vw;
+  position: relative;
+  background: url("assets/img/naegel.jpg") no-repeat center;
+  background-size: cover;
+  margin: 25px 20px;
+  border-radius: 2px;
+  box-shadow: 2px 3px 10px black;
+  filter: grayscale(0%);
+  transition: .3s ease-in-out;
+}
+.boxInformations {
+  position:absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 1.6em;
+}
+.testpara{
+  padding: 20px;
+}
+.restaurant:hover {
+  filter: grayscale(80%);
+}
+.bar:hover{
+  filter: grayscale(80%);
+}
+.patisserie:hover{
+  filter: grayscale(80%);
+}
+.pCreux{
+  text-align: center;
+  margin-top: 10px;
+  font-style: oblique;
+  text-shadow: 0.055em 0.055em black;
+}
+
 /* ==CSS Laura== */
 .secret {
     display: flex;
@@ -320,7 +359,7 @@ h2 {
     height: 50vh;
     background: url("assets/img/img-merciere.jpg") no-repeat center;
     background-size: cover;
-    border-radius: 2rem;
+    /* border-radius: 2rem; */
 }
 
 .footer {
@@ -363,7 +402,7 @@ h2 {
 background: url("./assets/img/obus.jpg") no-repeat center;
 background-size: cover;
 margin-right: 0.5rem;
-width: 45vw;
+width: 40vw;
 height: 33vh;
 }
 
@@ -372,7 +411,7 @@ height: 33vh;
   background: url("./assets/img/Obus-place-de-la-cathédrale.jpg") no-repeat center;
   background-size: cover;
   margin-left: 0.5rem;
-  width: 45vw;
+  width: 40vw;
   height: 33vh;
 }
 
@@ -392,38 +431,6 @@ height: 33vh;
   justify-content: center;
   align-items: center;
 }
-
-/* ==========readmore button===========> */
-
-#readMore 
-{
-    border: 0;
-    padding: 0 20px;
-    font-size: 1rem;
-    text-align: center;
-    color: #fff;
-    text-shadow: 1px 1px 1px #000;
-    border-radius: 10px;
-    background-color: rgb(68, 68, 68, 0.5);
-    background-image: linear-gradient(to top left,
-                                      rgba(0, 0, 0, .2),
-                                      rgba(0, 0, 0, .2) 30%,
-                                      rgba(0, 0, 0, 0));
-    box-shadow: inset 2px 2px 3px rgba(255, 255, 255, .6),
-                inset -2px -2px 3px rgba(0, 0, 0, .6);
-}
-
-#readMore:hover 
-{
-    background-color: rgb(63, 63, 63);
-}
-
-#readMore:active 
-{
-    box-shadow: inset -2px -2px 3px rgba(255, 255, 255, .6),
-                inset 2px 2px 3px rgba(0, 0, 0, .6);
-}
-/* <==========readmore button=========== */
 
 /* ==== SMOOTH SCROLL CLASS======> */
 
@@ -494,7 +501,7 @@ height: 33vh;
   border-radius: 50%;
   background: rgb(212, 212, 212, 0.4);
   box-shadow: 0 0 10px black(0, 0, 0, 0.25);
-  color: rgba(167, 167, 167, 0.4);
+  color: rgba(10, 10, 10, 0.719);
   outline: none;
   border: none;
   cursor: pointer;
@@ -518,15 +525,13 @@ height: 33vh;
 .quizz
 {
   padding: 1rem;
-  
 }
 
 #quiz
 {
   display: grid;
   grid-gap: 0.5rem;
-  
-  }
+}
 
 #valider
 {
@@ -534,15 +539,34 @@ height: 33vh;
   margin-left: auto;
   margin-right: auto;
   margin-top: 1rem;
+  margin-bottom: 1rem;
+  width: 12rem;
+  transition: 0.1s;
 }
 
-.question{
-	font-weight: 600;
-  background-color: aquamarine;
+.question {
+	font-weight: 550;
+  color: rgb(255, 255, 255);
+  border: solid 1px rgba(0, 0, 0, 0.5);
+  background-color: #3B3636;
+  border-radius: 5px;
+  width: 80vw;
+  padding: 0.5rem;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 .answers {
-    margin-bottom: 1rem;
-    background-color: aqua;
+  margin-bottom: 0.5rem;
+  padding-left: 1rem;
+  width: 80vw;
+  border: solid 1px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-direction: column;
 }
 
 input[type="radio"]{
@@ -555,15 +579,26 @@ label {
 }
 
 
-
+/* ========= MEDIA QUERIES ============ */
 
 @media only screen and (min-width: 600px){
+    #contact-form {
+      width: 90%;
+    }
     .contact-title {
         font-size: 1.75rem;
+        text-align: center;
     }
     input, textarea, button {
         font-size: 0.65rem;
     }
+
+    input[type="email"], input[type="text"], textarea {
+      font-size: 1em;
+      font-weight: 500;
+      font-family: "Playfair display", arial;
+    }
+
     .description {
         font-size: 0.3rem;
         margin-left: 0.4rem;
@@ -592,7 +627,7 @@ label {
    .merciere {
        width: 50%;
        padding: 1rem;
-       border-radius: 2rem;
+       /* border-radius: 2rem; */
      
    }
     .secret1 {
@@ -636,19 +671,5 @@ label {
          height: 100vh;
      }
 
-
-     .contact-title
-     {
-       text-align: center;
-     }
-     
-     #quiz
-     {
-      grid-template-columns: repeat(4, 1fr);
-    }
-
-    .card {
-      box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-    }
 }
 

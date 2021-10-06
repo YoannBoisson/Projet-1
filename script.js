@@ -88,14 +88,14 @@ btnScrollToTop.addEventListener("click", function () {
       {
          question: "D'où provient le nom de la rue Mercière ?",
          answers: {
-            a: '...',
-            b: '...',
-            c: '...'
+            a: 'En lien avec le commerce qui s\'y tenait',
+            b: 'Vis-à-vis d\'un politique habitant la rue',
+            c: 'Sur décision du cardinal A.G. M. Rohan'
          },
-         correctAnswer: 'b'
+         correctAnswer: 'a'
       },
       {
-         question: "Question au hasard",
+         question: "Que signifie 'spaetzle' ?",
          answers: {
             a: '...',
             b: '...',
@@ -113,40 +113,13 @@ btnScrollToTop.addEventListener("click", function () {
          correctAnswer: 'c'
       },
       {
-         question: "Question au hasard",
+         question: "Bonus : quel film a été tourné à Strasbourg ?",
          answers: {
             a: '...',
             b: '...',
             c: '...'
          },
          correctAnswer: 'a'
-      },
-      {
-         question: "Question au hasard2",
-         answers: {
-            a: '...',
-            b: '...',
-            c: '...'
-         },
-         correctAnswer: 'b'
-      },
-      {
-         question: "Question au hasard",
-         answers: {
-            a: '...',
-            b: '...',
-            c: '...'
-         },
-         correctAnswer: 'a'
-      },
-      {
-         question: "Question au hasard2",
-         answers: {
-            a: '...',
-            b: '...',
-            c: '...'
-         },
-         correctAnswer: 'b'
       }
    ];
 
@@ -175,7 +148,7 @@ generateQuiz(myQuestions, quizContainer, resultsContainer, submitButton);
                answers.push(
                   '<label>'
                      + '<input type="radio" name="question'+i+'" value="'+ letter +'">'
-                     + letter + ' : '
+                     + "  " + /* letter + */ "  "
                      + questions[i].answers[letter]
                   +'</label>'
                );
@@ -220,9 +193,9 @@ generateQuiz(myQuestions, quizContainer, resultsContainer, submitButton);
          }
       // SCORE
       resultsContainer.innerHTML = numCorrect + ' sur ' + questions.length;
-      resultsContainer.style.textAlign = "right";
+      resultsContainer.style.textAlign = "center";
       resultsContainer.style.fontStyle = "bold"
-      resultsContainer.style.fontSize = "2em"
+      resultsContainer.style.fontSize = "1em"
       resultsContainer.style.fontFamily = "Poppins"
    }
 
