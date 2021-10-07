@@ -95,20 +95,20 @@ btnScrollToTop.addEventListener("click", function () {
          correctAnswer: 'a'
       },
       {
-         question: "Que signifie 'spaetzle' ?",
+         question: "Quelle institution ne peut-on pas trouver à Strasbourg ?",
          answers: {
-            a: '...',
-            b: '...',
-            c: '...'
+            a: 'Le Parlement européen',
+            b: 'La Commission européenne',
+            c: 'La Cour européenne des droits de l\'homme'
          },
-         correctAnswer: 'a'
+         correctAnswer: 'b'
       },
       {
-         question: "Bonus : quel film a été tourné à Strasbourg ?",
+         question: "Quel film a été tourné à Strasbourg ?",
          answers: {
-            a: '...',
-            b: '...',
-            c: '...'
+            a: 'Sherlock Holmes',
+            b: 'Le Pacte des loups',
+            c: 'Waterloo'
          },
          correctAnswer: 'a'
       }
